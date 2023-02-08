@@ -3,9 +3,17 @@
 # 1
 a=[53,32,19,79,25,5,47]
 
-print(max(a))
-print("-----------------")
-print(min(a))
+max = a[0]
+min = a[0]
+d = 0
+for i in a:
+
+    if i > max:
+        max = i
+    if i < min:
+        min = i
+
+print("max = ", max,"min = ", min)
 
 # 2
 a=int (input("enter number 1: "))
@@ -59,26 +67,39 @@ for i in range(1,num+1):
     md=md*i
     print(md)
 # 9
-z=int
-w=int
-print ("لحساب مساحة المستطيل اضغط الرقم 1 :")
-print ("لحساب محيط المستطيل اضغط الرقم 2 :")
-z=int (input("ادخل رقم العملية:"))
-if (z==1):
-  x=int (input("ادخل طول المستطيل:"))
-  y=int (input("ادخل عرض المستطيل:"))
-  print ("مساحة المستطيل =",x*y)
-if (z==2):
+class rectangle:
+    def __init__(self,length,width):
+        self.length=length
+        self.width=width
+    def area_rectangle (self,length,width):
+        area=length*width
+        return area
+    def mference_rectangle (self,length,width):
+        mference1=2*(length+width)
+        return mference1
 
-  x = int(input("ادخل طول المستطيل:"))
-  y = int(input("ادخل عرض المستطيل :"))
-  w =2*(x+y)
-  print("محيط المستطيل = ",w)
+x=int (input("enter length"))
+y=int (input("enter width"))
+rectangle1=rectangle(x,y)
+print(rectangle1.area_rectangle(x,y))
+print(rectangle1.mference_rectangle(x,y))
 # 10
-radius = int(input("Enter the radius of a circle"))
-area = 3.1415 * radius * radius
-cir = 2 * 3.1415 * radius
-print(f"Area = {area} and Circumference = {cir}")
+p = 3.1415
+class Circle:
+
+    def __init__(self,p,radius):
+        self.p=p
+        self.radius=radius
+    def circle_area(self,p,radius):
+        area=p*radius*radius
+        return area
+    def circle_mference (self,p,radius):
+        mference=2*p*radius
+        return mference
+r=float(input("enter radius"))
+circle1=Circle(p,r)
+print(circle1.circle_area(p,r))
+print(circle1.circle_mference(p,r))
 
 
 #احمد عبدالله الدعيس
