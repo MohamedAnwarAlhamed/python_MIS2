@@ -1,83 +1,100 @@
 
-#المعتصم بالله القدمي##
-# 1
-a=[47,5,25,79,19,32,53]
-print("min,mix")
-print(max(a))
-print(min(a))
+#غفران فؤاد العصيمي
+#1
+a=[53,32,19,79,25,5,47]
 
-# 2
-e=int(input("Entr the nampr"))
-s=int(input("Entr the nampr"))
-if e%s==0:
+max = a[0]
+min = a[0]
+d = 0
+for i in a:
+    if i> max:
+     max=i
+    if i < min:
+     min=i
+print("max =", max, "min =" ,min)
+#2
+a= int(input("enter number 1:"))
+b=int(input("enter number 2:"))
+
+c=a/b
+if a%b==0:
     print(True)
-else:
+elif a%b==1:
     print(False)
-# 3
-a=input("لمعرفه ماهواادخل اي شي ")
-if a==str:
-    print("string")
-elif a==float:
-    print("flot")
-elif a==int:
-    print("intgar")
-# 4
-numbers = [386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,399, 162, 758, 219, 918, 237, 412, 566, 826, 248,866, 950, 626, 949, 687, 217,815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379,843, 831, 445, 742, 717,958,743, 527]
+#3
+a=[]
+
+print(type(a))
+#4
+numbers =[386,462,47,418,907,344,236,375,832,566,597,978,328,615,953
+,345,399,162,758,219,918,
+237,412,566,826,248,866,950,626,949,687,
+217,815,67,104,58,512,24,892,894,767,553,81,379,843,831,445,742
+,717,958,743,527]
 for i in numbers:
     if i%2==0:
         print(i)
         if i ==237:
             break
-
-# 5
-a=[3,3,8,5,1]
-p=int(input("ادخل رقم لمعرفه هل يوجد بالمصفوفه"))
-if p in a:
+#5
+a=int (input("enter number:"))
+groub=[1,5,8,3,3]
+if a in groub:
    print(True)
 else:
    print(False)
-# 6
-a=[1,2,3,3,4,4,5]
-p=[]
-for o in a:
-    if o not in p :
-       p.append(o)
-print(p)
-# 7
-e = str(input("ادخل كلمه اذا عكستها تكون نفس الكلمه  "))
-p = len(e)
-c = ""
-while p > 0:
-    c += e[p - 1]
-    p -= 1
-
-if c == e:
-    print("Truo")
+#6
+a=[1,2,3,3,3,3,4,5]
+print(set(a))
+#7
+a=input("enter:")
+x=""
+z=len(a)
+for i in a :
+    x+=a[z-1]
+    z=z-1
+d=x
+print(d)
+if d==a:
+    print(True)
 else:
     print(False)
-# 8
-i=int(input("لمعرفه مضروب العدد"))
-v=1
-s=1
-while v<=i:
-  s*=v
-  v+=1
-print(s)
-# 9
-t=int(input("ادخل طول المستطيل"))
-q=int(input("ادخل عرض المستطيل"))
-m=t*q
-print("مساجه المستطيل =")
-print(m)
-# 10
-r=int(input("لمعرفه ناتج محيط ومساحه الداءره"))
-m=float
-m=3.14*2*r
-print("مساحه =")
-print(m)
-h=3.14*r*r
-print("المحيط=")
-print(h)
+#8
+num = int(input("enter number"))
+md=1
+for i in range(1,num+1):
+    md=md*i
+    print(md)
+#9
+class rectangle:
+ def __init__(self,length,width):
+    self.length=length
+    self.width=width
+def area_rectangle(self,length,width):
+    area=length*width
+    return area
+def mference_rectangle(self,length,width):
+    mference1=2*(length+width)
+    return mference1
 
+x=int(input("enter length"))
+y=int(input("enter width"))
+rectangle1=rectangle(x,y)
+print(rectangle1.area_rectangle(x,y))
+print(rectangle1.mference_rectangle(x,y))
+#10
+p=3.1415
+class Circle:
 
-#المعتصم بالله القدمي
+ def __init__(self,p,radius):
+    self.p=p
+    self.radius=radius
+def circle_area(self,p,radius):
+    area=p*radius*radius
+    return area
+def Circle_mference(self,p,radius):
+    return mference
+r=float(input("enter radius"))
+circle1=Circle(p,r)
+print(circle1.circle_area(p,r))
+print(circle1.Circle_mference(p,r))
